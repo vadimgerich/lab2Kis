@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import config from "./config.json";
-import initBooks from "./bugalt/init";
+import initBugalts from "./bugalt/init";
 
 
 //підключення до бази даних
@@ -10,8 +10,7 @@ mongoose.connect (connectionUrl, {
     useUnifiedTopology: true 
 })
 .then(()=>{
-    //виклик ініціалізації списку книг 
-    initBooks.run().then( ()=>{
+    initBugalts.run().then( ()=>{
         console.log(`Database vas initialised`);  
     }); 
 })
