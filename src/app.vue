@@ -125,12 +125,11 @@ export default {
  
     showNewBugaltForm() {
       this.bugalt = Object.assign(this.bugalt, {
-        title: "",
-        authors: [],
-        isbn: "",
-        published: "1997-01-10T22:00:00.000Z",
-        pages: 0,
-        price: 0
+        pib: "",
+        posada: "",
+        payment: ,
+        countOfChilds: ,
+        stage: 0,
       });
       this.formAction = this.addNewBugalt;
       this.formVisible = true;
@@ -146,7 +145,7 @@ export default {
     addNewBugalt() {
       //спочатку робимо хук 
       this.postBugalt(this.bugalt).
-      //потім додаємо книгу в список якщо хук пройшов вдало
+
       then(bugalt => this.bugalts.push(bugalt));
     },
 
